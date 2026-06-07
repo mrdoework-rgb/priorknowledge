@@ -58,7 +58,7 @@ def create_powerpoint(data_list):
     return pptx_io
 
 # Streamlit UI
-st.title("Science Lesson Recall Starter Generator")
+st.title("The Sausage Factory:- Make a load of Recall Questions for a whole topic where the questions only cover prior knowledge and are  targeted at the content most relevant to the lesson")
 
 
 # Try to get API key from secrets first, then sidebar
