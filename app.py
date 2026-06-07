@@ -58,7 +58,7 @@ def create_powerpoint(data_list):
     return pptx_io
 
 # Streamlit UI
-st.title("Science Lesson Starter Generator")
+st.title("Science Lesson Recall Starter Generator")
 
 
 # Try to get API key from secrets first, then sidebar
@@ -70,8 +70,8 @@ if sidebar_key:
 if api_key:
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel('gemini-2.5-flash')
-
-lesson_input = st.text_area("Enter your lesson sequence data here:", height=150)
+st.markdown("Lesson Data in this Format [Put the Learning Objectives into this and copy and paste into the box below](https://priorylewes.sharepoint.com/:x:/s/Science/IQAB3rdK5KCzQJHuqKNH2v9bAV2mWOAtpNOe94_awdPjr08?e=XNcoWG).")
+lesson_input = st.text_area("Paste your lesson sequence data here:", height=150)
 
 if "lessons_data" not in st.session_state:
     st.session_state.lessons_data = []
