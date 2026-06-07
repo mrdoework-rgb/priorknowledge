@@ -105,7 +105,7 @@ if st.button("Generate Questions"):
 
 if st.session_state.lessons_data:
     with st.form("editor_form"):
-        st.write("### Edit Generated Questions")
+        st.write("### Edit any of the questions and download the Powerpoint at the bottom")
         for i, lesson in enumerate(st.session_state.lessons_data):
             st.subheader(f"{lesson['Lesson_title']} (Lesson {lesson['sequence_number']})")
             st.session_state.lessons_data[i]['recall'] = st.text_area("Recall Questions", value=lesson['recall'], key=f"rec_{i}")
